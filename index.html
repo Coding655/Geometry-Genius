@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Geometry Genius</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
     <header>
@@ -11,13 +12,116 @@
     </header>
     <main>
         <!-- container -->
-        <div>
+        <div class="flex flex-col lg:flex-row" >
             <!-- shape container -->
-            <div>
-
+            <div class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 mr-8">
+                <!-- shape-1 -->
+                <div class="w-80 shadow-xl bg-base-100 p-16">
+                    <figure><img src="images/triangle.png" alt="triangle"></figure>
+                    <div>
+                        <h3>Triangle</h3>
+                        <p>Area(A)=0.5* base * height</p>
+                        <p>
+                            <input type="text">
+                            <span>cm</span>
+                            <input type="text">
+                            <span>cm</span>
+                        </p>
+                        <div>
+                            <button>Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- shape-2 -->
+                <div class="w-80 shadow-xl bg-base-100 p-16">
+                    <figure><img src="images/rectangle.png" alt="triangle"></figure>
+                    <div>
+                        <h3>Triangle</h3>
+                        <p>Area(A)=0.5* base * height</p>
+                        <p>
+                            <input type="text">
+                            <span>cm</span>
+                            <input type="text">
+                            <span>cm</span>
+                        </p>
+                        <div>
+                            <button>Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- shape-3 -->
+                <div class="w-80 shadow-xl bg-base-100 p-16">
+                    <figure><img src="images/parallelogram.png" alt="triangle"></figure>
+                    <div>
+                        <h3>Triangle</h3>
+                        <p>Area(A)=0.5* base * height</p>
+                        <p>
+                            <input type="text">
+                            <span>cm</span>
+                            <input type="text">
+                            <span>cm</span>
+                        </p>
+                        <div>
+                            <button>Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- shape-4 -->
+                <div class="w-80 shadow-xl bg-base-100 p-16">
+                    <figure><img src="images/rhombus.png" alt="triangle"></figure>
+                    <div>
+                        <h3>Triangle</h3>
+                        <p>Area(A)=0.5* base * height</p>
+                        <p>
+                            <input type="text">
+                            <span>cm</span>
+                            <input type="text">
+                            <span>cm</span>
+                        </p>
+                        <div>
+                            <button>Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- shape-5 -->
+                <div class="w-80 shadow-xl bg-base-100 p-16">
+                    <figure><img src="images/pentagon.png" alt="triangle"></figure>
+                    <div>
+                        <h3>Triangle</h3>
+                        <p>Area(A)=0.5* base * height</p>
+                        <p>
+                            <input type="text">
+                            <span>cm</span>
+                            <input type="text">
+                            <span>cm</span>
+                        </p>
+                        <div>
+                            <button>Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- shape-6 -->
+                <div class="w-80 shadow-xl bg-base-100 p-16">
+                    <figure><img src="images/ellipse.png" alt="triangle"></figure>
+                    <div>
+                        <h3>Triangle</h3>
+                        <p>Area(A)=0.5* base * height</p>
+                        <p>
+                            <input type="text">
+                            <span>cm</span>
+                            <input type="text">
+                            <span>cm</span>
+                        </p>
+                        <div>
+                            <button>Calculate</button>
+                        </div>
+                    </div>
+                </div>
             </div>
             <!-- area container -->
-            <div>Text Area</div>
+            <div>
+                <div>Area Calculation</div>
+            </div>
         </div>
     </main>
     <footer>
