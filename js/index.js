@@ -16,10 +16,15 @@ function setTextValueById (textId, newText){
     const textElement = document.getElementById(textId);
     textElement.innerText = newText;
 }
-/* Area Calculations */
-function calculationArea(){
-
+function setCalculationEntry(areaType, area){
+    const calculateEntry = document.getElementById('area-calculation');
+    const count = calculateEntry.childElementCount;
+    const p = document.createElement('p');
+    p.innerHTML = `${count }. ${areaType} ${area} cm<sup>2</sup> <button class="btn btn-sm btn-success text-white font-bold mt-2 mb-2">convert</button>`;
+    calculateEntry.appendChild(p);
+    
 }
+
 
 
 document.getElementById('triangle-btn').addEventListener('click', function(){
@@ -33,7 +38,9 @@ document.getElementById('triangle-btn').addEventListener('click', function(){
     const triangleTextValue = getInnerTextValueById('triangle-innerText');
     const totalTriangleAmount = totalTriangleValue + triangleTextValue;
     setTextValueById('triangle-innerText', totalTriangleAmount);
-    
+    // const calculationAreaType = calculationArea('area-calculation');
+    // setTextValueById('area-calculation', calculationAreaType);
+    setCalculationEntry('Triangle:', totalTriangleAmount);
 
 })
 
@@ -48,6 +55,7 @@ document.getElementById('rectangle-btn').addEventListener('click', function(){
     const rectangleInnerText = getInnerTextValueById('rectangle-innerText');
     const rectangleTotalAmount = totalRectangleValue + rectangleInnerText;
     setTextValueById('rectangle-innerText', rectangleTotalAmount);
+    setCalculationEntry("Rectangle", rectangleTotalAmount);
 })
 document.getElementById('parallelogram-btn').addEventListener('click', function(){
     const parallelogramInputLeftValue = getInputValueById('para-input-left');
@@ -60,6 +68,7 @@ document.getElementById('parallelogram-btn').addEventListener('click', function(
     const parallelogramInnerText = getInnerTextValueById('para-text');
     const parallelogramTotalAmount = parallelogramValue + parallelogramInnerText;
     setTextValueById('para-text', parallelogramTotalAmount);
+    setCalculationEntry("Parallelogram", parallelogramTotalAmount);
 })
 document.getElementById('rhombus-btn').addEventListener('click', function(){
    const  rhombusInputLeftValue = getInputValueById('rhombus-input-left');
@@ -72,6 +81,7 @@ document.getElementById('rhombus-btn').addEventListener('click', function(){
     const rhombusInnerText =  getInnerTextValueById ('rhombus-innerText');
     const rhombusTotalAmount = 0.5 *  rhombusValue + rhombusInnerText;
     setTextValueById('rhombus-innerText', rhombusTotalAmount);
+    setCalculationEntry("Rhombus", rhombusTotalAmount);
 })
 document.getElementById('pentagon-btn').addEventListener('click', function(){
     const PentagonInputLeftValue = getInputValueById('pentagon-input-left');
@@ -84,6 +94,7 @@ document.getElementById('pentagon-btn').addEventListener('click', function(){
     const PentagonInnerText =  getInnerTextValueById ('pentagon-innerText');
     const PentagonTotalAmount = (0.5 *  PentagonValue)  + PentagonInnerText;
     setTextValueById('pentagon-innerText', PentagonTotalAmount);
+    setCalculationEntry("Pentagon", PentagonTotalAmount);
 })
 function setOneClick(){
     const ellipseLeftInputValue = getInputValueById('ellipse-input-left');
@@ -96,4 +107,5 @@ function setOneClick(){
     const ellipseInnerText =  getInnerTextValueById('ellipse-innerText');
     const totalEllipseAmount = (3.1416 * ellipseValue) + ellipseInnerText;
     setTextValueById('ellipse-innerText', totalEllipseAmount);
+    setCalculationEntry("Ellipse", totalEllipseAmount);
 }
